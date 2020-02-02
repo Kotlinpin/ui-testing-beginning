@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">FontAwesome</string>
+    <string name="btn_auth_title">Авторизоваться</string>
+    <string name="btn_skip_title">Пропустить</string>
 
     <!-- REGULAR ICONS -->
     <string name="fa_heart">&#xf004;</string>
