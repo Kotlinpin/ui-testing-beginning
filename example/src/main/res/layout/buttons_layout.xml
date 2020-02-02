@@ -13,7 +13,7 @@
     <LinearLayout
         android:id="@+id/buttons_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -22,15 +22,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Авторизоваться" />
+            android:text="@string/btn_auth_title" />
 
         <Button
             android:id="@+id/button_skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/button_auth"
-            android:layout_centerInParent="true"
             android:layout_marginBottom="16dp"
-            android:text="Пропустить" />
+            android:text="@string/btn_skip_title" />
+
+        <TextView
+            android:id="@+id/edit_text_skip_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginBottom="16dp"/>
     </LinearLayout>
 </LinearLayout>

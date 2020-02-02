@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Font Awesome</string>
+    <string name="app_name">Test App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Font Awesome</string>
@@ -9,4 +9,19 @@
     <string name="lbl_regular_icons">REGULAR ICONS</string>
     <string name="lbl_solid_icons">SOLID ICONS</string>
     <string name="lbl_brand_icons">BRAND ICONS</string>
+    <string name="btn_auth_title">Авторизоваться</string>
+    <string name="btn_skip_title">Пропустить</string>
+    <string name="hint_login">Логин</string>
+    <string name="hint_password">Пароль</string>
+    <string name="auth_btn_next">Далее</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
 </resources>
