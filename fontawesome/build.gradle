@@ -8,7 +8,7 @@ def libraryVersion = '0.0.5'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
-tasks.withType(org.gradle.api.tasks.javadoc.Javadoc) {
+tasks.withType(Javadoc) {
     options.encoding = 'UTF-8'
 }
 
@@ -80,7 +80,7 @@ artifactory {
 android {
     compileSdkVersion 28
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 26
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
