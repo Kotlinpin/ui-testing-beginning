@@ -5,6 +5,6 @@ import info.androidhive.fontawesome.example.R
 
 object LoginScreen : BaseScreen() {
     fun isScreenDisplayed() {
-        super.isScreenDisplayed(withId(R.id.auth_login_parent)) // корневой родитель всех вьюх данного скрина
+        super.isScreenDisplayed(withId(R.id.login_root_parent)) // корневой родитель всех вьюх данного скрина
     }
 }
