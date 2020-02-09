@@ -1,4 +1,4 @@
-package info.androidhive.fontawesome.example.screens
+package example.screens
 
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import info.androidhive.fontawesome.example.R

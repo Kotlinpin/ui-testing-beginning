@@ -1,19 +1,17 @@
-@file:Suppress("DEPRECATION")
-
-package info.androidhive.fontawesome.example.tests
+package example.tests
 
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import androidx.test.runner.AndroidJUnit4
+import example.custom.actions.clickOnView
+import example.screens.BeginScreen
+import example.screens.LoginScreen
 import info.androidhive.fontawesome.example.MainActivity
 import info.androidhive.fontawesome.example.R
-import info.androidhive.fontawesome.example.custom.actions.clickOnView
-import info.androidhive.fontawesome.example.screens.BeginScreen
-import info.androidhive.fontawesome.example.screens.LoginScreen
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -38,11 +36,10 @@ class AuthorizationButtonTest {
     @Test
     fun should_press_on_auth_button_then_check_is_auth_screen_opened() {
         onView(
-            withText(R.string.btn_auth_title) // Matcher<View>
+          withText(R.string.btn_auth_title) //  или withId(R.id.button_auth)
         ).perform(
             click()   // ViewAction
         )
-
         onView(
             withId(R.id.login_root_parent) // Matcher<View>
         ).check(
@@ -50,7 +47,7 @@ class AuthorizationButtonTest {
         )
     }
 
-    // Тот же самый тест, но только на паттерне PageObject
+    // Тот же самый тест, что и выше, но только на паттерне PageObject
     @Test
     fun should_press_on_auth_button_then_check_is_auth_screen_opened_2() {
         BeginScreen.isScreenDisplayed()     // проверяем отображается ли скрин
@@ -59,21 +56,26 @@ class AuthorizationButtonTest {
     }
 
     @Test
-    fun should_press_on_auth_button_then_get_and_press_skip() {
+    fun should_press_on_auth_button_then_get_back_and_press_skip() {
+
+        //шаг1: нажимаем  на кнопку Авторизоваться  "Авторизоваться"
         onView(
             withText(R.string.btn_auth_title)
         ).perform(
             click()
         )
 
+        //шаг2: нажимаем  назад
         Espresso.pressBack()
 
+        //шаг3: нажимаем  на кнопку "Пропустить"
         onView(
             withText(R.string.btn_skip_title)
         ).perform(
             click()
         )
 
+        //шаг4: проверяем отображение вьюшки с тесктом "SkipButton was pressed"
         onView(
             withText(R.string.skip_btn_pressed_notification)
         ).check(
