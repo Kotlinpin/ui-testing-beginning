@@ -1,4 +1,4 @@
-package info.androidhive.fontawesome.example.custom.actions
+package example.custom.actions
 
 import android.view.View
 import androidx.test.espresso.Espresso.onView
